@@ -44,12 +44,26 @@
       >
         <h3><i class="el-icon-video-camera-solid"></i>&nbsp;视频类别</h3>
       </router-link>
-      <router-link
-        to="/TextUploader"
-        :class="{ underline: $route.path === '/TextUploader' }"
+      <div
+        class="dropdown"
+        @mouseover="showDropdown = true"
+        @mouseleave="showDropdown = false"
+        :class="{
+          underline:
+            $route.path === '/MessageSpider',
+        }"
       >
-        <h3><i class="el-icon-s-order"></i>&nbsp;文本类别</h3>
-      </router-link>
+        <a>
+          <h3>
+            <i class="el-icon-picture"></i>&nbsp; 文本类别
+            <i class="el-icon-caret-bottom"></i>
+          </h3>
+        </a>
+        <div v-if="showDropdown" class="dropdown-content">
+          <div class="triangle-up"></div>
+          <a @click="goToImageUploader('MessageSpider')">微博数据爬取鉴定</a>
+        </div>
+      </div>
     </nav>
 
     <!-- footer -->
