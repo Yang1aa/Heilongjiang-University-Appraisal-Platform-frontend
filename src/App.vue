@@ -55,7 +55,7 @@
       >
         <a>
           <h3>
-            <i class="el-icon-picture"></i>&nbsp; 文本类别
+            <i class="el-icon-document"></i>&nbsp; 文本类别
             <i class="el-icon-caret-bottom"></i>
           </h3>
         </a>
