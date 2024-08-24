@@ -4,13 +4,14 @@
     <el-row class="image-row">
       <el-col :span="24">
         <el-card class="image-display">
-          <p slot="header">词云图</p>
-          <el-image
+          <!-- <p slot="header">词云图</p> -->
+          <!-- <el-image
             v-if="imageSrc"
             :src="imageSrc"
             fit="contain"
             alt="Image"
-          ></el-image>
+          ></el-image> -->
+          <img src="../../public/ciyun1.png" alt="" class="fit-image"/>
         </el-card>
       </el-col>
     </el-row>
@@ -59,7 +60,7 @@
             <el-button
               type="primary"
               :disabled="!crawledData"
-              style="margin-left: 20px;"
+              style="margin-left: 20px"
             >
               鉴定
             </el-button>
@@ -85,7 +86,7 @@
             <el-button
               type="success"
               :disabled="!crawledData"
-              style="margin-left: 20px;"
+              style="margin-left: 20px"
             >
               下载
             </el-button>
@@ -113,7 +114,7 @@
 export default {
   data() {
     return {
-      imageSrc: "", // 图片的URL
+      imageSrc: "../../public/ciyun2.png", // 图片的URL
       keyword: "",
       crawledData: null,
       models: ["模型1", "模型2", "模型3"], // 示例模型列表
@@ -168,6 +169,11 @@ export default {
   line-height: 300px;
   font-size: 24px;
   background-color: #f5f5f5;
+}
+.fit-image{
+  max-width: 45%;
+  max-height: 45%;
+  object-fit: contain;
 }
 
 .input-group,
